@@ -1,4 +1,5 @@
 from PIL import Image
+import subprocess
 
 ASCII_CHARS = ['.',',',':',';','+','*','?','%','S','#','@']
 ASCII_CHARS = ASCII_CHARS[::-1]
@@ -8,7 +9,7 @@ method resize():
     - takes as parameters the image, and the final width
     - resizes the image into the final width while maintaining aspect ratio
 '''
-def resize(image, new_width=100):
+def resize(image, new_width=55):
     (old_width, old_height) = image.size
     aspect_ratio = float(old_height)/float(old_width)
     new_height = int(aspect_ratio * new_width)
@@ -36,7 +37,7 @@ def modify(image, buckets=25):
 method do():
     - does all the work by calling all the above functions
 '''
-def do(image, new_width=100):
+def do(image, new_width=55):
     image = resize(image)
     image = grayscalify(image)
 
@@ -92,3 +93,5 @@ if __name__ == '__main__':
 
     for i in range(0,317):
         runner(path+"/frame"+str(i)+".jpg")
+
+    subprocess.call(["cls"], shell=True)
