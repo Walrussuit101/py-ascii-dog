@@ -1,7 +1,7 @@
 # py-ascii-dog
 ascii art for my favorite doggo video:
 
-<video controls>
+<video width="320" height="240" controls>
   <source src="myreasonforliving.mov" type="video/mp4">
 </video>
 
