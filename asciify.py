@@ -94,7 +94,7 @@ if __name__ == '__main__':
 
     for i in range(0,317):
         runner(path+"/frame"+str(i)+".jpg")
-        #wait 10 ms before next frame
-        sleep(0.01)
+        #wait 30 ms before next frame
+        sleep(0.03)
 
     subprocess.call(["cls"], shell=True)
